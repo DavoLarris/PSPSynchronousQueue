@@ -35,10 +35,9 @@ public class Consumer extends Thread {
        */
     @Override
     public void run() {
-        int value;
         for (int i = 0; i < Consumer.ITERATIONS_NUMBER; i++) {
-            try {
-				value = (Integer) queue.take();
+        	try{
+				System.out.println("Consumer. take: " + queue.take());
 			} catch (InterruptedException e) {
 				System.err.println(e.getMessage());
 			}

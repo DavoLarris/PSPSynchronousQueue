@@ -39,6 +39,7 @@ public class Producer extends Thread {
     @Override
     public void run() {
        for (int i = 0; i < Producer.ITERATIONS_NUMBER; i++) {
+    	   System.out.println("Productor. put" + i);
     	   try {
 			queue.put(i);
 		} catch (InterruptedException e1) {
